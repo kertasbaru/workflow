@@ -1,0 +1,65 @@
+{
+  "description": "Recovered encryption parameters from deobfuscated aio-mod",
+  "source_repository": "https://github.com/willstore69/toolkit",
+
+  "xor_encoding": {
+    "description": "XOR encoding used in modified bash binary to hide bootstrap script",
+    "salt_name": "xbash_salt",
+    "salt_hex": "b4358007ab01ad68032925b19a7ff53c",
+    "salt_bytes": [180, 53, 128, 7, 171, 1, 173, 104, 3, 41, 37, 177, 154, 127, 245, 60],
+    "word_name": "xbash_word",
+    "word_size_bytes": 1326,
+    "salt_address": "0x3a1b54",
+    "word_address": "0x3a1b64",
+    "decode_function": "xbash_decode (at 0x25d06c)",
+    "execute_function": "execute_code (at 0x25d098, 15436 bytes)"
+  },
+
+  "aes_encryption": {
+    "algorithm": "AES-256-CBC",
+    "key_derivation": "PBKDF2-HMAC-SHA256",
+    "pbkdf2_salt": "aiomodsalt",
+    "pbkdf2_iterations": 100000,
+    "derived_key_length_bytes": 32,
+    "iv_source": "First 16 bytes of encrypted data",
+    "padding": "PKCS7"
+  },
+
+  "key_fragments": {
+    "description": "The AES key is assembled from 4 separately obfuscated fragments",
+    "_a": {
+      "encoding": "hex escape sequences",
+      "encoded": "\\x69\\x44\\x42\\x78\\x39\\x58\\x42\\x37",
+      "decoded": "iDBx9XB7"
+    },
+    "_b": {
+      "encoding": "base64",
+      "encoded": "aUhMZmgwalY=",
+      "decoded": "iHLfh0jV"
+    },
+    "_c": {
+      "encoding": "ROT13",
+      "encoded": "2NZ7KE1O",
+      "decoded": "2AM7XR1B"
+    },
+    "_d": {
+      "encoding": "hex escape sequences",
+      "encoded": "\\x30\\x4f\\x54\\x31\\x4a\\x49\\x42\\x4c",
+      "decoded": "0OT1JIBL"
+    },
+    "combined_key": "iDBx9XB7iHLfh0jV2AM7XR1B0OT1JIBL"
+  },
+
+  "payload": {
+    "format": "ZIP archive",
+    "encrypted_size_bytes": 18084680,
+    "decrypted_size_bytes": 13581234,
+    "main_executable": "aio-mod_encoded_ready.bin",
+    "main_executable_size_bytes": 18856096,
+    "compiler": "Nuitka",
+    "source_file": "aio-mod_encoded_ready.py",
+    "python_version": "3.13",
+    "target_platform": "Android aarch64 (Termux)",
+    "total_files": 81
+  }
+}
