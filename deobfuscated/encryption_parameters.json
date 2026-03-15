@@ -5,7 +5,7 @@
   "xor_encoding": {
     "description": "XOR encoding used in modified bash binary to hide bootstrap script",
     "salt_name": "xbash_salt",
-    "salt_hex": "b4358007ab01ad680329259a7ff53c",
+    "salt_hex": "b4358007ab01ad68032925b19a7ff53c",
     "salt_bytes": [180, 53, 128, 7, 171, 1, 173, 104, 3, 41, 37, 177, 154, 127, 245, 60],
     "word_name": "xbash_word",
     "word_size_bytes": 1326,

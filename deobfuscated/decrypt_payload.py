@@ -28,7 +28,8 @@ from Crypto.Util.Padding import unpad
 import hashlib
 
 key = sys.argv[1].encode()
-data = open(sys.argv[2], 'rb').read()
+with open(sys.argv[2], 'rb') as f:
+    data = f.read()
 
 dk = hashlib.pbkdf2_hmac('sha256', key, b'aiomodsalt', 100000, 32)
 
@@ -37,4 +38,5 @@ enc = data[16:]
 
 dec = unpad(AES.new(dk, AES.MODE_CBC, iv).decrypt(enc), AES.block_size)
 
-open(sys.argv[3], 'wb').write(dec)
+with open(sys.argv[3], 'wb') as f:
+    f.write(dec)
