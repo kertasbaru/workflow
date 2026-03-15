@@ -1,0 +1,100 @@
+Decrypted ZIP Archive Contents
+================================
+Total files: 81
+Extracted from: AES-256-CBC encrypted payload in aio-mod
+
+Main Executable:
+  aio-mod_encoded_ready.bin              18 MB   Nuitka-compiled Python app (aarch64)
+
+Python Runtime:
+  libpython3.13.so                       5.2 MB  Python 3.13 shared library
+
+SSL/Crypto Libraries:
+  libcrypto.so.3                         5.0 MB  OpenSSL libcrypto
+  libssl.so.3                            856 KB  OpenSSL libssl
+
+PyCryptodome (Crypto):
+  Crypto/Cipher/_Salsa20.so              16 KB
+  Crypto/Cipher/_raw_aes.so              44 KB
+  Crypto/Cipher/_raw_cbc.so              16 KB
+  Crypto/Cipher/_raw_cfb.so              20 KB
+  Crypto/Cipher/_raw_ctr.so              24 KB
+  Crypto/Cipher/_raw_ecb.so              8 KB
+  Crypto/Cipher/_raw_eksblowfish.so      44 KB
+  Crypto/Cipher/_raw_ocb.so              24 KB
+  Crypto/Cipher/_raw_ofb.so              12 KB
+  Crypto/Hash/_BLAKE2s.so                20 KB
+  Crypto/Hash/_MD5.so                    28 KB
+  Crypto/Hash/_SHA1.so                   52 KB
+  Crypto/Hash/_SHA224.so                 32 KB
+  Crypto/Hash/_SHA256.so                 32 KB
+  Crypto/Hash/_SHA384.so                 36 KB
+  Crypto/Hash/_SHA512.so                 36 KB
+  Crypto/Hash/_ghash_portable.so         16 KB
+  Crypto/Hash/_keccak.so                 24 KB
+  Crypto/Protocol/_scrypt.so             16 KB
+  Crypto/Util/_cpuid_c.so                8 KB
+  Crypto/Util/_strxor.so                 8 KB
+
+Android/Termux Support:
+  ld-android.so                          68 KB   Android dynamic linker
+  libandroid-posix-semaphore.so          8 KB
+  libandroid-support.so                  24 KB
+  liblog.so                              140 KB  Android logging
+
+C/C++ Runtime:
+  libc++.so                              924 KB  C++ standard library
+  libffi.so                              84 KB   Foreign function interface
+  libz.so.1                              72 KB   zlib compression
+
+Python Extension Modules:
+  _asyncio.so                            68 KB
+  _blake2.so                             44 KB
+  _bz2.so                                20 KB
+  _codecs_cn.so                          144 KB
+  _codecs_hk.so                          156 KB
+  _codecs_iso2022.so                     24 KB
+  _codecs_jp.so                          256 KB
+  _codecs_kr.so                          132 KB
+  _codecs_tw.so                          108 KB
+  _contextvars.so                        8 KB
+  _csv.so                                36 KB
+  _ctypes.so                             136 KB
+  _datetime.so                           116 KB
+  _decimal.so                            344 KB
+  _hashlib.so                            60 KB
+  _heapq.so                              20 KB
+  _lzma.so                               36 KB
+  _md5.so                                24 KB
+  _multibytecodec.so                     40 KB
+  _multiprocessing.so                    20 KB
+  _opcode.so                             20 KB
+  _pickle.so                             116 KB
+  _posixshmem.so                         12 KB
+  _posixsubprocess.so                    20 KB
+  _queue.so                              16 KB
+  _random.so                             16 KB
+  _sha1.so                               20 KB
+  _sha2.so                               48 KB
+  _sha3.so                               32 KB
+  _socket.so                             100 KB
+  _ssl.so                                220 KB
+  _statistics.so                         8 KB
+  _struct.so                             48 KB
+  array.so                               60 KB
+  binascii.so                            28 KB
+  fcntl.so                               20 KB
+  grp.so                                 16 KB
+  math.so                                64 KB
+  mmap.so                                28 KB
+  pyexpat.so                             72 KB
+  select.so                              32 KB
+  termios.so                             28 KB
+  unicodedata.so                         684 KB
+  zlib.so                                44 KB
+
+Other:
+  libbz2.so.1.0                          52 KB
+  libexpat.so.1                          136 KB
+  liblzma.so.5                           156 KB
+  certifi/cacert.pem                     268 KB  CA certificate bundle
